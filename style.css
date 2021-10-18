@@ -1,0 +1,27 @@
+*{margin:0; padding: 0;}
+.bg-full{
+    background-color: #222;
+    height: 100vh;
+    width: 100%;
+}
+.center-wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 1024px;
+    min-width: 300px;
+}
+
+.wrapper {
+    width: 280px;
+    height: 10px;
+    background-color: #031a64;
+    margin: 20px auto;
+}
+.loading-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #f0f5f4;
+}

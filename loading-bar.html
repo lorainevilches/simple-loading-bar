@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Loading Bar</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="bg-full">
+        <div class="center-wrapper">
+
+            <div class="wrapper">
+                <div class="loading-bar"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script>
+        
+        function load(seconds) {
+            const progress_bar = document.querySelector('.loading-bar')
+            let percent = 0
+            const interval = setInterval(() => {
+                percent += 1
+                progress_bar.style.width = percent + '%'
+                if (percent > 100) {
+                    clearInterval(interval)
+                }
+
+                //IF YOU WANNA TO REDIRECT TO SOME PAGE, JUST ADD THIS CODE
+
+                // if(percent > 90){
+                //     redirectTime = "10";
+                //     redirectURL = "http://lorainevilches.com/";
+                //     setTimeout("location.href = redirectURL;",redirectTime);
+                // }
+            }, (seconds * 5000)/100);
+        }   
+
+        load(1);
+        
+    </script>
+</body>
+</html>
